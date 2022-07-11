@@ -1,0 +1,707 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 86%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+header{
+  width: 100%;
+  padding: 15px 0 15px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+header .wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav li{
+  margin-left: 30px;
+}
+nav li:nth-child(1){
+  margin-left: 0;
+}
+nav a{
+  border: 2px solid transparent;
+  padding: 5px 1% 5px;
+  color: #fff;
+  font-size: 12px;
+  text-transform: capitalize;
+  transition: .5s;
+}
+nav a:hover{
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+nav li:nth-child(1) a{
+  border-bottom: 2px solid #000;
+}
+header .wrapper>a{
+  background-color:transparent;
+  border: 2px solid rgb(44,79,44);
+  padding: 5px 1% 5px;
+  color: rgb(44,79,44);
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: .5s;
+}
+header .wrapper>a:hover{
+  background: #000;
+  color: #fff;
+}
+
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+
+/* Banner Start Styling From Here */
+
+.banner{
+  height: 100vh;
+  background: url(https://via.placeholder.com/2600x1150) no-repeat center;
+  position: relative;
+}
+.banner h2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 70px;
+  font-weight: 800;
+
+}
+
+/* Banner End Styling From Here */
+
+/* Hero Start Styling From Here */
+.hero{
+  background: #000;
+  color: #fff;
+  padding: 60px 0 40px;
+}
+.hero ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero ul li{
+  display: flex;
+  flex-basis: 42%;
+}
+.hero ul li div{
+  margin-left: 8%;
+}
+.hero ul li div p:nth-child(1){
+  font-size: 25px;
+}
+.hero ul li div p:nth-child(2){
+  text-transform: capitalize;
+  font-size: 10px;
+}
+.hero .wrapper>div {
+  margin: 10% 0 9%;
+  display: flex;
+  justify-content: space-between;
+}
+.hero .wrapper>div li img{
+  width: inherit;
+  box-shadow: 6px 6px rgb(72, 212, 148);
+  /* position: relative; */
+}
+
+.hero .wrapper>div li h3{
+  color: rgb(72, 212, 148);
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 800;
+}
+.hero .wrapper>div li div{
+  margin-right: 20%;
+}
+.hero .wrapper>div li p{
+  line-height: 22px;
+  margin: 15% 0 15%;
+}
+.hero .wrapper>div li a {
+  background: rgb(72, 212, 148);
+  padding: 4% 8% 4%;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 8px;
+  border-radius: 5%;
+  transition: .5s;
+}
+.hero .wrapper>div li a:hover{
+  background: #fff;
+}
+
+/* Hero End Styling From Here */
+
+/* Gallary Start Styling Start From Here */
+.gallary{
+  background-color: #000;
+}
+.gallary-text{
+  width: 50%;
+}
+.gallary-text h3{
+  color: rgb(72, 212, 148);
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 700;
+}
+.gallary-text p{
+  margin: 25px 0 40px;
+  color: rgba(255,255,255,.2);
+  line-height: 22px;
+}
+.gallary ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallary-round{
+  padding: 2% 0 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallary-round div{
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.gallary-round div:nth-child(1){
+  background:rgb(72, 212, 148);
+  margin-right: 1%;
+}
+/* Gallary End Styling Start From Here */
+
+/* Schedule Styling Start From Here */
+.schedule{
+  background-color: #000;
+  padding: 10% 0 10%;
+  color: #fff;
+}
+.schedule .schedule-text{
+  width: 50%;
+}
+.schedule .schedule-text h3{
+  color: rgb(72, 212, 148);
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 700;
+}
+.schedule .schedule-text p{
+  margin-top: 25px;
+  color: rgba(255,255,255,.2);
+  line-height: 22px;
+}
+.schedule .schedule-btn{
+  margin: 45px 0 35px;
+  text-align: center;
+}
+.schedule .schedule-btn li{
+  margin-left: 4%;
+}
+.schedule .schedule-btn li a{
+  padding: 10px 20% 10px;
+  color: rgba(255,255,255,.6);
+  border-radius: 5%;
+  font-size: 12px;
+  text-transform: capitalize;
+  transition: 0.5s;
+}
+.schedule .schedule-btn li a:hover{
+  background:rgb(72, 212, 148);
+}
+.schedule .schedule-btn li:nth-child(1) a{
+  margin-left: 0;
+  background:rgb(72, 212, 148);
+}
+
+.schedule-table{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.schedule-table li ul{
+  border: 1px solid rgba(255,255,255,.6);
+}
+.schedule-table li ul li{
+  border-right: 1px solid rgba(255,255,255,.6);
+  padding: 2% 45px 2%;
+}
+.schedule-table li ul li:nth-child(4){
+  border-right: 0;
+}
+.schedule-table li ul li:nth-child(4) a {
+  color: rgb(72, 212, 148);
+}
+.schedule-table li ul li:nth-child(1),
+.schedule-table li ul li:nth-child(3){
+  text-transform: capitalize;
+}
+
+/* Schedule Styling End From Here */
+
+
+/* Trainers Styling Start From Here */
+
+.trainers{
+  background-color: #000;
+  padding-bottom: 140px;
+  color: #fff;
+}
+.trainers .trainer-text{
+  width: 50%;
+}
+.trainer-text h3{
+  color: rgb(72, 212, 148);
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 700;
+}
+.trainer-text p{
+  margin-top: 25px;
+  color: rgba(255,255,255,.2);
+  line-height: 22px;
+}
+.trainers ul{
+  margin-top: 40px;
+  display: flex;
+}
+.trainers ul li{
+  display: flex;
+  flex-direction: column;
+}
+.trainers ul li div{
+  margin-top: 30px;
+}
+.trainers ul li div h4{
+  text-transform: capitalize;
+  font-size: 22px;
+}
+.trainers ul li div p{
+  margin: 10px 0 20px;
+  color: rgba(255,255,255,.4);
+}
+.trainers ul li img{
+  box-shadow: 6px 6px rgb(72, 212, 148);
+}
+.trainers ul li:nth-child(2){
+  margin: 0 5% 0;
+}
+.trainers ul li:nth-child(2) figure{
+  margin-top: 30px;
+}
+
+/* Trainers Styling End From Here */
+
+
+/* Services Styling Start Here */
+
+.services{
+  background: #000;
+  padding-bottom: 70px;
+  color: #fff;
+}
+.services .services-text{
+  width: 50%;
+}
+.services .services-text h3{
+  color: rgb(72, 212, 148);
+  text-transform: capitalize;
+  font-size: 40px;
+  font-weight: 700;
+}
+.services .services-text p{
+  margin-top: 25px;
+  color: rgba(255,255,255,.2);
+  line-height: 22px;
+}
+.services ul{
+  padding: 50px 0 30px;
+  display: flex;
+}
+.services ul li img{
+  width: inherit;
+}
+.services ul li{
+  padding: 5%;
+  background:rgb(72, 212, 148);
+  display: flex;
+  flex-direction: column;
+}
+.services li div h4{
+  margin: 25px 0 20px;
+  text-transform: capitalize;
+}
+.services li div p{
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(255,255,255,.4);
+}
+.services ul li:nth-child(2){
+  margin: 0 4% 0;
+}
+/* Services Styling End Here */
+
+
+/* Contact Styling Start From Here */
+
+.contact{
+  background:rgba(0,0,0,.9);
+  padding: 70px 0 70px;
+  position: relative;
+}
+.contact .wrapper{
+  width: 35%;
+}
+.contact h3{
+  color: rgb(72, 212, 148);
+  text-transform: capitalize;
+  font-size: 40px;
+  font-weight: 700;
+}
+.contact p{
+  padding: 20px 0 30px;
+  color: rgba(255,255,255,.4);
+  font-size: 13px;
+  line-height: 20px;
+}
+.input{
+  display: flex;
+}
+.input, .subject, .email, .message, .submit{
+  margin-bottom: 2%;
+}
+.input input:nth-child(1){
+  margin-right: 5%;
+}
+.input input[type="text"]{
+  background: transparent;
+  border: 2px solid rgba(255,255,255,.6);
+  color: #fff;
+  width: 100%;
+  padding: 2%;
+  outline: 0;
+}
+.subject input[type="text"],
+.email input[type="email"],
+.message textarea{
+  background: transparent;
+  border: 2px solid rgba(255,255,255,.6);
+  color: #fff;
+  width: 95.5%;
+  padding: 2%;
+  outline: 0;
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder{
+  color: rgba(255,255,255,.4);
+}
+input[type="submit"]{
+  padding: 2% 14% 2%;
+}
+input[value="send message"]{
+  background-color: rgb(72, 212, 148);
+  text-transform: uppercase;
+  color: #000;
+  font-size: 10px;
+  font-weight: 800;
+  transition: 0.5s;
+}
+input[value="send message"]:hover{
+  background-color: #fff;
+}
+/* Contact Styling End From Here */
+
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+
+footer{
+  background-color: #000;
+  padding: 85px 0 100px;
+  color: #fff;
+}
+footer ul{
+  display: flex;
+}
+footer ul li:nth-child(2){
+  margin: 0 15% 0;
+}
+footer ul li:nth-child(2) div{
+  margin-top: 30%;
+}
+footer ul li:nth-child(2) div a{
+  margin-bottom: 15%;
+  color: rgba(72, 212, 148,.4);
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: .5s;
+}
+footer ul li:nth-child(2) div a:hover{
+  color: #fff;
+}
+footer li h4{
+  margin-bottom: 8%;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+}
+footer li p{
+  color: rgba(255,255,255,.2);
+  font-size: 12px;
+  line-height: 20px;
+}
+footer li:nth-child(3)>div div{
+  margin-top: 5%;
+  display: flex;
+}
+footer li:nth-child(3)>div div input{
+  width: 100px;
+  background-color: transparent;
+  border: 1px solid rgba(255,255,255,.4);
+  padding: 3% 4% 3%;
+}
+footer li:nth-child(3)>div div button{
+  border: 0;
+  background-color: rgb(72, 212, 148);
+  padding: 4%;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s;
+}
+footer li:nth-child(3)>div div button:hover{
+  background-color: #fff;
+}
+footer ul:nth-child(2){
+  margin-top: 15%;
+  justify-content: center;
+  align-items: center;
+}
+footer ul:nth-child(2) p{
+  text-transform: capitalize;
+}
+footer ul:nth-child(2) span{
+  color: rgba(72, 212, 148,.4);
+}
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+@media only screen and (max-width: 1148px) {
+  .schedule-table li ul li {
+    padding: 2% 30px 2%;
+  }
+}
+/*media query for 1148px starts here*/
+
+/*media query for 940px starts here*/
+@media only screen and (max-width: 940px) {
+  header .wrapper>a {
+    margin-top: 20px;
+  }
+  .hero .wrapper>div {
+    flex-direction: column;
+  }
+  .hero .wrapper>div li div {
+    margin-bottom: 10%;
+  }
+  header .wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .schedule-table li ul li {
+    padding: 2% 17px 2%;
+  }
+  footer ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  footer ul li:nth-child(2) {
+    margin: 0;
+    margin-top: 20px;
+  }
+  footer ul li:nth-child(2) div {
+    margin-top: 0%;
+  }
+}
+/*media query for 935px starts here*/
+
+/*media query for 768px starts here*/
+
+@media only screen and (max-width: 768px) {
+  nav ul{
+    display: flex;
+    flex-direction: column;
+  }
+  nav li {
+    margin-left: 0;
+  }
+  .banner h2 {
+    font-size: 50px;
+  }
+  .hero .wrapper>div li div {
+    margin-right: 0%;
+  }
+  .hero ul {
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+  }
+  .gallary-text, .schedule .schedule-text,
+  .trainers .trainer-text,.services .services-text{
+    width: 100%;
+  }
+  .gallary-round div:nth-child(1){
+    margin-right: 3%;
+  }
+  .schedule-table ul{
+    display: flex;
+  }
+  .trainers ul {
+    flex-direction: column;
+  }
+  .hero .wrapper>div li img {
+    width: 100%;
+  }
+  .trainers ul li:nth-child(2) {
+    margin: 0;
+  }
+  .services ul {
+    flex-direction: column;
+  }
+  .services ul li:nth-child(2) {
+    margin: 20px 0 20px;
+  }
+}
+/*media query for 768px starts here*/
